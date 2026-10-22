@@ -1,0 +1,15 @@
+{
+  "name": "cafeeron-plugins",
+  "description": "Claude Code plugins by CAFEERON21br18.",
+  "owner": {
+    "name": "CAFEERON21br18",
+    "url": "https://github.com/CAFEERON21br18"
+  },
+  "plugins": [
+    {
+      "name": "daily-master-prompt",
+      "source": "./",
+      "description": "Create and run a self-contained daily master prompt for any project."
+    }
+  ]
+}

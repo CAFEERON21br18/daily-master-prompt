@@ -1,0 +1,14 @@
+{
+  "name": "daily-master-prompt",
+  "displayName": "Daily Master Prompt",
+  "description": "Turn any project into a self-running daily work session: one DAILY_PROMPT.md plus state files (backlog, devlog, handoff, questions, approvals) that a fresh Claude session can pick up with a single line.",
+  "version": "1.0.0",
+  "author": {
+    "name": "CAFEERON21br18",
+    "url": "https://github.com/CAFEERON21br18"
+  },
+  "homepage": "https://github.com/CAFEERON21br18/daily-master-prompt",
+  "repository": "https://github.com/CAFEERON21br18/daily-master-prompt",
+  "license": "MIT",
+  "keywords": ["workflow", "autonomous", "daily", "backlog", "handoff", "prompt", "session"]
+}
