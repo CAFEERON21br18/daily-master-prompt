@@ -1,6 +1,14 @@
+<div align="center">
+
 # Daily Master Prompt
 
-A Claude Code plugin that turns any project into a self-running daily work session.
+**A Claude Code plugin that turns any project into a self-running daily work session.**
+
+[Install](#install) · [How it works](#why-it-works-with-one-line) · [See a full example after 3 days](examples/weather-cli/)
+
+<img src="media/hero.png" alt="Five steps every session follows: read the handoff, apply your answers, pick the top of the backlog, build and verify, leave a handoff. The project's memory lives in six Markdown files." width="900">
+
+</div>
 
 You explain the project once (or point Claude at what's already there). The plugin writes a single `DAILY_PROMPT.md` plus five small state files into your project. From then on, every day, a fresh Claude session only needs one line:
 
@@ -9,6 +17,12 @@ Read games/speed-escape/DAILY_PROMPT.md and execute it.
 ```
 
 It reads where the last session stopped, does the next items in the backlog, checks its own work, commits, and leaves a handoff for tomorrow.
+
+### What you get at the end of each session
+
+<img src="media/report.png" alt="End-of-session report: one item done with its commit, one blocked with a question for you, a pending approval, milestone progress and the next actions" width="720">
+
+Want to see every file after a few days of work? Open [`examples/weather-cli/`](examples/weather-cli/): a full backlog with commit hashes, a devlog, a handoff, one answered question and one waiting for you.
 
 ## Why it works with one line
 
@@ -97,6 +111,9 @@ When `DAILY_PROMPT.md` exists, `create` edits it (or adds a dated entry under `#
 .claude-plugin/
   plugin.json          plugin manifest
   marketplace.json     makes this repo installable as a marketplace
+examples/
+  weather-cli/         every file after 3 daily sessions
+media/                 images for this README
 skills/
   create/
     SKILL.md           builds or updates a project's daily master prompt
@@ -120,6 +137,14 @@ Bump `version` in `.claude-plugin/plugin.json` for every release, otherwise `cla
 - Its skills only read files in your project and write Markdown files (`DAILY_PROMPT.md`, `BACKLOG.md`, `DEVLOG.md`, `HANDOFF.md`, `QUESTIONS.md`, `APPROVALS.md`) inside your project folder.
 - The plugin ships no executable code. During a session, Claude may run your project's own commands (tests, builds, git commits) through its normal tools, under your Claude Code permission settings. Publishing, deploying, pushing and adding dependencies are written to `APPROVALS.md` for you to decide, unless your own project rules allow them.
 - Questions or concerns: open an issue on this repository.
+
+## Also by me
+
+- [**claude-skills / study-pack**](https://github.com/CAFEERON21br18/claude-skills): turn your course notes into a syllabus, an interactive revision page and a study plan. [Live demo](https://cafeeron21br18.github.io/claude-skills/study-pack-demo/).
+
+## ⭐ Like it?
+
+Star the repo so more people find it, and open an issue with what you'd like next.
 
 ## License
 
