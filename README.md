@@ -114,6 +114,13 @@ claude --plugin-dir .
 
 Bump `version` in `.claude-plugin/plugin.json` for every release, otherwise `claude plugin update` keeps users on the old copy.
 
+## Privacy and security
+
+- This plugin collects no data and sends nothing anywhere. It has no MCP servers, hooks, scripts or network access, and the author runs no service that could receive data.
+- Its skills only read files in your project and write Markdown files (`DAILY_PROMPT.md`, `BACKLOG.md`, `DEVLOG.md`, `HANDOFF.md`, `QUESTIONS.md`, `APPROVALS.md`) inside your project folder.
+- The plugin ships no executable code. During a session, Claude may run your project's own commands (tests, builds, git commits) through its normal tools, under your Claude Code permission settings. Publishing, deploying, pushing and adding dependencies are written to `APPROVALS.md` for you to decide, unless your own project rules allow them.
+- Questions or concerns: open an issue on this repository.
+
 ## License
 
 MIT
